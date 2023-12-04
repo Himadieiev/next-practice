@@ -1,5 +1,7 @@
+import Heading from "@/components/Heading";
+
 const Home = () => {
-  return <div>New project</div>;
+  return <Heading text="New project" />;
 };
 
 export default Home;
