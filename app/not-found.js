@@ -1,11 +1,27 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
 import Heading from "@/components/Heading";
+import css from "../styles/NotFound.module.scss";
 
 const NotFound = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    setTimeout(() => {
+      router.push("/");
+    }, 3000);
+  }, []);
+
   return (
-    <>
-      <Heading text="404" />
-      <Heading tag="h2" text="Something is going wrong..." />
-    </>
+    <div className={css.wrapper}>
+      <div>
+        <Heading text="404" />
+        <Heading tag="h2" text="Something is going wrong..." />
+      </div>
+    </div>
   );
 };
 

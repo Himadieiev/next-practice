@@ -3,9 +3,7 @@ import Heading from "./Heading";
 const Footer = () => {
   return (
     <footer>
-      <header>
-        <Heading tag="h3" text="Created by Himadieiev" />
-      </header>
+      <Heading tag="h3" text="Created by Himadieiev" />
     </footer>
   );
 };
