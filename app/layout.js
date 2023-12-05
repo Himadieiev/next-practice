@@ -1,7 +1,10 @@
 import { Inter } from "next/font/google";
+import Image from "next/image";
+
 import "../styles/globals.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import img1 from "../public/img1.jpg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +19,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Header />
         <main>{children}</main>
+        <div className="img">
+          <Image src={img1} alt="Picture" placeholder="blur" />
+        </div>
         <Footer />
       </body>
     </html>

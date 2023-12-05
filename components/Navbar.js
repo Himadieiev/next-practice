@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 import css from "../styles/Navbar.module.scss";
 
@@ -16,7 +17,9 @@ const Navbar = () => {
 
   return (
     <nav className={css.nav}>
-      <div className={css.logo}>RH</div>
+      <div className={css.logo}>
+        <Image src="/logo.png" width={60} height={60} alt="Logo" />
+      </div>
       <div className={css.links}>
         {navigation.map(({ id, title, path }) => (
           <Link

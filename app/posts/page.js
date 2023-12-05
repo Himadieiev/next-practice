@@ -1,5 +1,9 @@
 import Heading from "@/components/Heading";
 
+export const metadata = {
+  title: "Posts",
+};
+
 const Posts = () => {
   return (
     <>
