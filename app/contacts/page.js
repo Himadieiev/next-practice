@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const { default: Heading } = require("@/components/Heading");
 
 const getContacts = async () => {
@@ -24,7 +26,7 @@ const Contacts = async () => {
         {contacts &&
           contacts.map(({ id, name, email }) => (
             <li key={id}>
-              <strong>{name}</strong> {email}
+              <Link href={`/contacts/${id}`}>{name}</Link>
             </li>
           ))}
       </ul>
