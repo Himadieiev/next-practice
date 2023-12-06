@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const { default: Heading } = require("@/components/Heading");
+import Heading from "@/components/Heading";
 
 const getContacts = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users", {
