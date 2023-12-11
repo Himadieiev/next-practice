@@ -10,7 +10,7 @@ export const getPosts = async () => {
   return res.json();
 };
 
-export const getPost = async (id) => {
+export const getPost = async (id: string) => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
     next: {
       revalidate: 60,

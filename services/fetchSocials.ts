@@ -1,5 +1,5 @@
 export const getSocials = async () => {
-  const res = await fetch("http://localhost:3000/api/socials");
+  const res = await fetch(`${process.env.API_HOST}/socials`);
 
   if (!res.ok) throw new Error("Unable to fetch socials.");
 

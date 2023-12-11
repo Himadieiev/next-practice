@@ -1,6 +1,13 @@
-import Heading from "./Heading";
+import React, { FC } from "react";
 
-const PostInfo = ({ post }) => {
+import Heading from "./Heading";
+import { PostType } from "../types/types";
+
+type PostInfoProps = {
+  post: PostType;
+};
+
+const PostInfo: FC<PostInfoProps> = ({ post }) => {
   const { title, body } = post || {};
 
   if (!post) {

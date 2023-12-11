@@ -1,4 +1,7 @@
-import ContactInfo from "@/components/ContactInfo";
+import React from "react";
+import { Metadata } from "next";
+
+import ContactInfo from "../../../components/ContactInfo";
 
 const getContact = async (id) => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
@@ -10,7 +13,7 @@ const getContact = async (id) => {
   return res.json();
 };
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Contact",
 };
 

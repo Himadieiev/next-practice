@@ -3,6 +3,8 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { FC } from "react";
+import React from "react";
 
 import css from "../styles/Navbar.module.scss";
 
@@ -12,7 +14,7 @@ const navigation = [
   { id: 3, title: "Contacts", path: "/contacts" },
 ];
 
-const Navbar = () => {
+const Navbar: FC = () => {
   const pathname = usePathname();
 
   return (

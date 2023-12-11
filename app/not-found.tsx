@@ -2,8 +2,9 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import React from "react";
 
-import Heading from "@/components/Heading";
+import Heading from "../components/Heading";
 import css from "../styles/NotFound.module.scss";
 
 const NotFound = () => {
@@ -18,7 +19,7 @@ const NotFound = () => {
   return (
     <div className={css.wrapper}>
       <div>
-        <Heading text="404" />
+        <Heading text="404" tag="h1" />
         <Heading tag="h2" text="Something is going wrong..." />
       </div>
     </div>

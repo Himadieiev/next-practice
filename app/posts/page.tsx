@@ -1,9 +1,11 @@
 import Link from "next/link";
+import React from "react";
+import { Metadata } from "next";
 
-import Heading from "@/components/Heading";
-import { getPosts } from "@/services/fetchPosts";
+import Heading from "../../components/Heading";
+import { getPosts } from "../../services/fetchPosts";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Posts",
 };
 
@@ -12,7 +14,7 @@ const Posts = async () => {
 
   return (
     <>
-      <Heading text="Posts list:" />
+      <Heading text="Posts list:" tag="h1" />
       <ul>
         {posts &&
           posts.map(({ id, title }) => (

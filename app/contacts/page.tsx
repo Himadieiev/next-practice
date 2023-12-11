@@ -1,6 +1,8 @@
 import Link from "next/link";
+import React from "react";
+import { Metadata } from "next";
 
-import Heading from "@/components/Heading";
+import Heading from "../../components/Heading";
 
 const getContacts = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users", {
@@ -12,7 +14,7 @@ const getContacts = async () => {
   return res.json();
 };
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Contacts",
 };
 
@@ -21,7 +23,7 @@ const Contacts = async () => {
 
   return (
     <>
-      <Heading text="Contacts list:" />
+      <Heading text="Contacts list:" tag="h1" />
       <ul>
         {contacts &&
           contacts.map(({ id, name, email }) => (
