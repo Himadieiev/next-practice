@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React from "react";
 
 import css from "../styles/Socials.module.scss";
